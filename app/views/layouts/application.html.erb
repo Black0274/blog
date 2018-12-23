@@ -10,9 +10,18 @@
 
   <body>
 
-    <%= link_to 'Все статьи', postds_path %>
-    <%= link_to 'Новая статья', new_postd_path %>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="<%= postds_path %>">ФОТО</a>
+      </li>
+    </ul>
+    <%= link_to 'Добавить', new_postd_path, class: 'btn btn-outline-primary pull-xs-right' %>
+  </nav>
 
+  <div class="container main">
     <%= yield %>
+  </div>
+
   </body>
 </html>
