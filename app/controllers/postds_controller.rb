@@ -40,7 +40,7 @@ class PostdsController < ApplicationController
   private
 
   def postd_params
-    params.require(:postd).permit(:title, :summary, :body)
+    params.require(:postd).permit(:title, :summary, :body, :image)
   end
 
   def set_postd

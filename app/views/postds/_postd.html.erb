@@ -8,7 +8,8 @@
     </small>
   </section>
 
-  <section class="postd-summary">
+  <section class="postd-summary clearfix">
+    <%= image_tag postd.image.url(:thumb), class: 'img-thumbnail thumb' if postd.image?%>
     <%= postd.summary %>
   </section>
 </article>

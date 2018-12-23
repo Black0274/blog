@@ -9,6 +9,7 @@
   </section>
 
   <section class="postd-body">
+    <%= image_tag @postd.image.url(:large), class: 'img-show' if @postd.image? %>
     <%= @postd.body %>
   </section>
 </article>
