@@ -1,0 +1,31 @@
+                                 <% if @postd.errors.any? %>
+                                   <div class = "alert alert-danger">
+                                     <h5><%= t('common.errors') %></h5>
+                                     <ul>
+                                       <% @postd.errors.full_messages.each do |message| %>
+                                         <li><%= message %></li>
+                                       <% end %>
+                                     </ul>
+                                   </div>
+                                 <% end %>
+
+                                 <%= form_for @postd do |f| %>
+                                   <div class = "form-control">
+                                     <%= f.label :title %>
+                                     <%= f.text_field :title %>
+                                   </div>
+
+                                   <div class = "form-control">
+                                     <%= f.label :summary %>
+                                     <%= f.text_area :summary %>
+                                   </div>
+
+                                   <div class = "form-control">
+                                     <%= f.label :body %>
+                                     <%= f.text_area :body %>
+                                   </div>
+
+                                   <div class = "form-control">
+                                     <%= f.submit 'Сохранить' %>
+                                   </div>
+                                 <% end %>

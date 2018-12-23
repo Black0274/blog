@@ -1,0 +1,6 @@
+<h1><%= @postd.title %></h1>
+<%= link_to 'Изменить', edit_postd_path(@postd) %>
+
+<%= link_to 'Удалить', postd_path(@postd), method: :delete, data: {confrim: 'Вы уверены?'} %>
+
+<p><%= @postd.body %></p>
